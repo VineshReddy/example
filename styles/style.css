@@ -381,6 +381,8 @@ label {
 
 #about {
     min-height: 100vh;
+    background: #5d6f49;
+    color: white;
 }
 
 
@@ -388,6 +390,7 @@ label {
 .about-list {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 
 .about-item {
