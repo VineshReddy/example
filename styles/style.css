@@ -1,0 +1,412 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: "Montserrat";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid:
+        "header nav nav nav nav nav"
+        "main main main main main main"minmax(100vh, auto) "footer footer footer footer footer footer"
+}
+
+
+
+header {
+    grid-area: header;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: #4a78d0;
+    font-family: "Nothing You Could Do";
+    font-size: 3rem;
+    margin: 0vw 2vw 0vw 1vw;
+    padding: 10px;
+}
+
+
+nav {
+    grid-area: nav;
+}
+
+.menu {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    margin: auto;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #e8e8e8;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown li {
+    padding: 10px 10px 10px 10px;
+}
+
+.dropdown li:hover {
+    background: #8e8888;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+main {
+    grid-area: main;
+}
+
+section h2 {
+    width: fit-content;
+    border-bottom: 5px solid #ecd008;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+}
+
+section h3 {
+    font-size: 2rem;
+    padding: 10px 0px 20px 0px;
+}
+
+
+.gototop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.gototop i {
+    color: #717171;
+}
+
+
+
+.wrap {
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url("../images/slider/slider-1.jpg");
+}
+
+.slide2 {
+    background-image: url("../images/slider/slider-2.jpg");
+}
+
+.slide3 {
+    background-image: url("../images/slider/slider-3.jpg");
+}
+
+.slide-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+#arrow-left {
+    left: 0;
+}
+
+#arrow-right {
+    right: 0;
+}
+
+
+
+
+.hero-text>h1 {
+    font-size: 3.5rem;
+}
+
+.hero-text>p {
+    font-size: 2rem;
+}
+
+
+#footer {
+    grid-area: footer;
+    background: #627dc7;
+}
+
+.copyright {
+    padding: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.copyright p {}
+
+
+
+@media (min-width: 1281px) {
+    /* Desktops */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* Laptops & Desktops */
+}
+
+/*@media (min-width: 768px) and (max-width: 1024px) { */
+@media (max-width: 1024px) {
+
+    /* Tablets and Ipads(potrait)*/
+    .wrapper {
+        grid:
+            "header header header header header header"minmax(10vh, 10vh) "nav nav nav nav nav nav"minmax(10vh, 10vh) "main main main main main main"
+            "footer footer footer footer footer footer"
+    }
+
+    .contact-items {
+        flex-flow: column;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Tables and Ipads(Landscape) */
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+
+    /* Low Resolution Tablets, Mobiles (Landscape) */
+
+
+    .pricing-list {
+        flex-flow: wrap;
+    }
+
+    .pricing-item {
+        margin: 5px;
+        min-width: 40%;
+    }
+}
+
+
+
+#pricing {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)), url("https://cdn.pixabay.com/photo/2017/02/21/12/14/the-sale-2085766_960_720.png");
+    background-size: cover;
+    padding: 10px 0px 10px 10px;
+    min-height: 100vh;
+    white-space: nowrap;
+}
+
+.pricing-list {
+    display: flex;
+}
+
+.pricing-item {
+    flex: 1;
+    margin: 5px;
+    box-shadow: 3px 5px #b9b9b9;
+    border: 3px solid #3a3a3a;
+    border-radius: 1rem;
+}
+
+.pricing-item:first-child {
+    font-weight: bold;
+}
+
+.pricing-item>div {
+    padding: 20px;
+    border: 1px solid #bdb9b9;
+    text-align: center;
+}
+
+.pricing-item .title {
+    background: #f90;
+    padding: 30px;
+}
+
+.pricing-item .price {
+    background: blanchedalmond;
+    font-size: 1.5rem;
+}
+
+.pricing-item .specs {
+    background: mediumturquoise;
+}
+
+.pricing-item .discount {
+    background: lawngreen;
+}
+
+.pricing-item .order {
+    background: #e0dada;
+    font-size: 1.3rem;
+}
+
+.order a {
+    background: #5ca028;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 0px 20px 0px 20px;
+}
+
+
+
+
+
+#contact {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)), url("https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_960_720.png");
+    background-size: cover;
+}
+
+.contact-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form,
+.address,
+.connect {
+    flex: 33.33%;
+    margin: 0px 10px 10px 10px;
+    border: 7px solid #ccc8c8;
+    background: #e8e8e8;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.form div {
+    margin: 5px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 7px 14px;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}
+
+.contact-form .submit {
+    max-width: fit-content;
+    color: white;
+    background-color: #ff2222;
+}
+
+label,
+textarea {
+    display: block;
+}
+
+
+label {
+    padding: 5px 0px;
+}
+
+
+.address p {
+    padding: 7px;
+}
+
+
+.follow-us ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+
+.follow-us ul li {
+    padding: 5px;
+}
+
+
+
+
+#about {
+    min-height: 100vh;
+}
+
+
+
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-item {
+    margin: 5px;
+    min-width: 300px;
+    flex: 1 0 30%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.about-images {
+    width: 90%;
+    max-width: 500px;
+}
+
+.about-content {
+    padding: 5px 0px;
+}
+
+.about-content p {
+    padding: 5px 0px;
+}
