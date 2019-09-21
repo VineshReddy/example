@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-    color: #4a78d0;
+    color: #676869;
     font-family: "Nothing You Could Do";
     font-size: 3rem;
     margin: 0vw 2vw 0vw 1vw;
@@ -52,11 +52,22 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+	padding: 20px;
     height: 100%;
     margin: auto;
     color: black;
 }
+
+.menu-item {
+    color: #0a58b7;
+}
+
+.menu-item:last-child a {
+    padding: 15px;
+    background: #5a5a5a;
+    color: aliceblue;
+}
+
 
 .dropdown {
     position: relative;
