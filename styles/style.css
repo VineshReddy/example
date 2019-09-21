@@ -390,15 +390,13 @@ label {
 .about-list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 50px;
 }
 
 .about-item {
-    margin: 5px;
     min-width: 300px;
     flex: 1 0 30%;
-    margin: 10px;
-    padding: 10px;
+	margin: 0px 10px 30px 10px;
+	padding: 0px 10px 30px 10px;
 }
 
 .about-images {
