@@ -60,11 +60,16 @@ nav {
 
 .menu-item {
     color: #0a58b7;
+	font-weight: bold;
 }
 
+.menu-item a:hover {
+	    color: #f60;
+	}
+
 .menu-item:last-child a {
-    padding: 15px;
-    background: #5a5a5a;
+    padding: 12px;
+    background: #468fff;
     color: aliceblue;
 }
 
