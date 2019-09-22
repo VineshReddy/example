@@ -120,7 +120,7 @@ section h3 {
 }
 
 
-.gototop {
+#scroll-top{
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -129,7 +129,7 @@ section h3 {
     border-radius: 4px;
 }
 
-.gototop i {
+#scroll-top-chevron {
     color: #717171;
 }
 
@@ -248,6 +248,10 @@ section h3 {
 @media (min-width: 0px) and (max-width: 767px) {
 
     /* Low Resolution Tablets, Mobiles (Landscape) */
+
+	#scroll-top-chevron {
+		font-size: 7vw;
+	}
 
 
     .pricing-list {
